@@ -12,7 +12,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:5173")  // Allow frontend requests
+@CrossOrigin(origins = "*")  // Allow frontend requests
 @RestController
 public class AdminController {
 	  @Autowired

@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RestController;
 import klu.model.Booking;
 import klu.service.BookingService;
 
-@CrossOrigin(origins="http://localhost:5173")
+@CrossOrigin(origins="*")
 @RestController
 @RequestMapping("/api/admin")
 public class AdminBookingController {

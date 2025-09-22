@@ -55,7 +55,7 @@ const BookServicePage = () => {
     await generateQRCode();
 
     try {
-      const response = await fetch('http://localhost:8080/api/book', {
+      const response = await fetch('http://localhost:8081/api/book', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

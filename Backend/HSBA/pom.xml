@@ -11,7 +11,6 @@
 	<groupId>klu</groupId>
 	<artifactId>Jobportal-1</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>war</packaging>
 	<name>Jobportal-1</name>
 	<description>Demo project for Spring Boot</description>
 	<url/>

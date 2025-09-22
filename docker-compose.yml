@@ -1,0 +1,47 @@
+services:
+  db:
+    image: mysql:8.0
+    container_name: HomeService-db
+    restart: always
+    environment:
+      MYSQL_DATABASE: HomeService
+      MYSQL_ROOT_PASSWORD: root
+    ports:
+      - "3308:3306"
+    volumes:
+      - db_data:/var/lib/mysql
+    networks:
+      - homeservice-net
+
+  backend:
+    build:
+      context: ./Backend/HSBA
+      dockerfile: dockerfile.backend
+    container_name: HomeService-backend
+    restart: always
+    depends_on:
+      - db
+    ports:
+      - "8081:8081"
+    networks:
+      - homeservice-net
+
+  frontend:
+    build:
+      context: ./Frontend/HomeService
+      dockerfile: Dockerfile.frontend
+    container_name: HomeService-frontend
+    restart: always
+    depends_on:
+      - backend
+    ports:
+      - "3000:80"
+    networks:
+      - homeservice-net
+
+volumes:
+  db_data:
+
+networks:
+  homeservice-net:
+    driver: bridge

@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/hiring")
-@CrossOrigin
+@CrossOrigin("*")
 public class HiringController {
 
     @Autowired

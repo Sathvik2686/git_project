@@ -19,7 +19,7 @@ import klu.model.Users;
 
 @RestController
 @RequestMapping("/users")
-@CrossOrigin(origins="http://localhost:5173")
+@CrossOrigin(origins="*")
 public class UsersController {
 	
 	@Autowired  

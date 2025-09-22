@@ -17,7 +17,7 @@ const Feedback = () => {
     }
 
     try {
-      await axios.post('http://localhost:8080/feedback/send', {
+      await axios.post('http://localhost:8081/feedback/send', {
         email,
         message: feedback
       });

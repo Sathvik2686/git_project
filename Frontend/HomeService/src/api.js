@@ -1,7 +1,7 @@
 // api.js
 
 // Base URL for the backend API
-export const BASEURL = "http://localhost:8080"; 
+export const BASEURL = "http://localhost:8081"; 
 // Generic API caller function
 export function callApi(reqmethod, url, data, responseHandler) {
   let options;
